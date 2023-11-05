@@ -30,8 +30,16 @@ function Summary() {
             <div className="flex justify-center mt-6">
               <Button
                 onClick={downloadPDf}
-                isDisabled={!state.summary}>
-                Next
+                isDisabled={!state.email
+                  || !state.name
+                  || !state.summary
+                  || !state.portfolioLink
+                  || !state.githubLink
+                  || !state.twitterLink
+                  || !state.linkedInLink
+                  || !state.summary}
+              >
+                Download
               </Button>
             </div>
           </form>
