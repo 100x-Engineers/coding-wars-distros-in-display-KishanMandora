@@ -3,6 +3,7 @@ import Button from "../components/Button"
 import TextInput from "../components/TextInput"
 import { useForm } from "../hooks/useForm";
 import { LINKS } from "../utils/routeConsts";
+import Navbar from "../components/Navbar";
 
 function SignIn() {
   const { state, dispatch } = useForm();
@@ -21,18 +22,22 @@ function SignIn() {
   }
 
   return (
-    <section className="h-full w-full flex flex-col px-8 py-4 items-center justify-center">
-      <form className="bg-neutral-100 border border-neutral-200 rounded-lg p-4 w-96">
-        <TextInput type="email" label="Email" placeholder="Email" id="email" onChange={handleEmailChange} value={state.email} />
-        <TextInput label="Username" placeholder="Username" id="username" mt="mt-4" onChange={handleNameChange} value={state.name} />
+    <>
+      <Navbar />
+      <section className="h-9/10 w-full flex flex-col px-8 py-4 items-center justify-center">
+        <form className="bg-neutral-100 border border-neutral-200 rounded-lg p-4 w-96">
+          <TextInput type="email" label="Email" placeholder="Email" id="email" onChange={handleEmailChange} value={state.email} />
+          <TextInput label="Username" placeholder="Username" id="username" mt="mt-4" onChange={handleNameChange} value={state.name} />
 
-        <div className="flex justify-center mt-6">
-          <Button onClick={handleNavigate}>
-            Provide Links
-          </Button>
-        </div>
-      </form>
-    </section>
+          <div className="flex justify-center mt-6">
+            <Button onClick={handleNavigate}>
+              Provide Links
+            </Button>
+          </div>
+        </form>
+      </section>
+    </>
+
   )
 }
 

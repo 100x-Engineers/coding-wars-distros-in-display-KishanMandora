@@ -24,6 +24,11 @@ export default {
         50: "#ebebeb",
       },
     },
-    extend: {},
+    extend: {
+      spacing: {
+        "1/10": "10%",
+        "9/10": "90%",
+      },
+    },
   },
 };

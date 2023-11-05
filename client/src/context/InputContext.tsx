@@ -46,6 +46,10 @@ const formReducer = (state: FormState, action: FormAction): FormState => {
       return { ...state, portfolioLink: action.payload };
     case 'SET_GITHUB_LINK':
       return { ...state, githubLink: action.payload };
+    case 'SET_LINKEDIN_LINK':
+      return { ...state, linkedInLink: action.payload };
+    case 'SET_TWITTER_LINK':
+      return { ...state, twitterLink: action.payload };
     default:
       return state;
   }
