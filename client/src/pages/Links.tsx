@@ -40,8 +40,9 @@ function Link() {
             onChange={handleLinkedInLinkChange}
             value={state.linkedInLink} />
 
-          <div className="flex justify-center mt-6" onClick={() => { }}>
-            <Button>
+          <div className="flex justify-center mt-6">
+            <Button
+              isDisabled={!state.portfolioLink || !state.githubLink || !state.twitterLink || !state.linkedInLink}>
               Provide Summary
             </Button>
           </div>

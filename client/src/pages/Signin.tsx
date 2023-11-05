@@ -30,7 +30,7 @@ function SignIn() {
           <TextInput label="Username" placeholder="Username" id="username" mt="mt-4" onChange={handleNameChange} value={state.name} />
 
           <div className="flex justify-center mt-6">
-            <Button onClick={handleNavigate}>
+            <Button onClick={handleNavigate} isDisabled={!state.email || !state.name}>
               Provide Links
             </Button>
           </div>
