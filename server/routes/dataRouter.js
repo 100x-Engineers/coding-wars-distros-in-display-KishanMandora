@@ -1,5 +1,4 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const OpenAI = require('openai');
 const cors = require('cors');
 require('dotenv').config();
@@ -8,18 +7,6 @@ const openai = new OpenAI({apiKey: 'sk-LyCjW5RKLmXnDF2pavwAT3BlbkFJvtVddLykqtlUi
 
 const dataRouter = express.Router();
 
-mongoose.connect('mongodb://127.0.0.1:27017/resume-builder')
-    .then(() => console.log('connected to resume-builder'))
-    .catch(err => console.error('could not connect to mongoDB.' , err));
-
-const resumeSchema = new mongoose.Schema({
-    name: String,
-    email: String,
-    contact: Number,
-    experience: [String],
-    education: [String],
-    skills: [String]
-});
 
 
 async function getAIGeneratedResponse(requestedGenerateMessage){
