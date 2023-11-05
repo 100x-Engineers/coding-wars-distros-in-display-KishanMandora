@@ -4,7 +4,7 @@ const OpenAI = require('openai');
 const cors = require('cors');
 require('dotenv').config();
 
-const openai = new OpenAI({apiKey: process.env.OPENAI_API_KEY});
+const openai = new OpenAI({apiKey: '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'});
 
 const dataRouter = express.Router();
 
