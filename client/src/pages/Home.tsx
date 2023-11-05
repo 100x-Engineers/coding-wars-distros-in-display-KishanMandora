@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { SIGN_IN } from "../utils/routeConsts";
+import { TEMPLATES } from "../utils/routeConsts";
 
 function Home() {
   const navigate = useNavigate();
 
   const handleNavigate = () => {
-    navigate(SIGN_IN);
+    navigate(TEMPLATES);
   }
 
   return (

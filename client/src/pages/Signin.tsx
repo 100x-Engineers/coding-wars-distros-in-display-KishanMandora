@@ -24,7 +24,8 @@ function SignIn() {
   return (
     <>
       <Navbar />
-      <section className="h-9/10 w-full flex flex-col px-8 py-4 items-center justify-center">
+      <section className="h-9/10 w-full flex flex-col px-8 py-4 items-center">
+        <h2 className="text-4xl font-semibold mb-12"> Sign In </h2>
         <form className="bg-neutral-100 border border-neutral-200 rounded-lg p-4 w-96">
           <TextInput type="email" label="Email" placeholder="Email" id="email" onChange={handleEmailChange} value={state.email} />
           <TextInput label="Username" placeholder="Username" id="username" mt="mt-4" onChange={handleNameChange} value={state.name} />

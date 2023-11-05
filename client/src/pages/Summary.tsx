@@ -13,7 +13,8 @@ function Summary() {
   return (
     <>
       <Navbar />
-      <section className="h-9/10 w-full flex flex-col px-8 py-4 items-center justify-center">
+      <section className="h-9/10 w-full flex flex-col px-8 py-4 items-center">
+        <h2 className="text-4xl font-semibold mb-12"> Add Summary </h2>
         <form className="bg-neutral-100 border border-neutral-200 rounded-lg p-4 w-2/3">
           <Textarea
             label='Summary'
