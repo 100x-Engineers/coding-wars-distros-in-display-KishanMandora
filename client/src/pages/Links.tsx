@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button"
 import Navbar from "../components/Navbar";
 import TextInput from "../components/TextInput"
@@ -5,6 +6,7 @@ import { useForm } from "../hooks/useForm"
 
 function Link() {
   const { state, dispatch } = useForm();
+  const navigate = useNavigate();
 
   const handlePortfolioLinkChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'SET_PORTFOLIO_LINK', payload: e.target.value });
@@ -20,6 +22,10 @@ function Link() {
 
   const handleLinkedInLinkChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({ type: 'SET_LINKEDIN_LINK', payload: e.target.value });
+  }
+
+  const handleNavigate = () => {
+    navigate("/summary");
   }
 
   return (
@@ -42,6 +48,7 @@ function Link() {
 
           <div className="flex justify-center mt-6">
             <Button
+              onClick={handleNavigate}
               isDisabled={!state.portfolioLink || !state.githubLink || !state.twitterLink || !state.linkedInLink}>
               Provide Summary
             </Button>

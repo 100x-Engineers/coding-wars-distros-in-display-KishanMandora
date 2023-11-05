@@ -5,7 +5,8 @@ import {
 import Home from "./pages/Home"
 import SignIn from "./pages/Signin";
 import Links from "./pages/Links";
-import { HOME, SIGN_IN, LINKS } from "./utils/routeConsts";
+import Summary from "./pages/Summary";
+import { HOME, SIGN_IN, LINKS, SUMMARY } from "./utils/routeConsts";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: LINKS,
     element: <Links />,
+  },
+  {
+    path: SUMMARY,
+    element: <Summary />,
   }
 ]);
 
