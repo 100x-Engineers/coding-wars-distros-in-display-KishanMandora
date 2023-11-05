@@ -3,12 +3,13 @@ type ButtonProps = {
   children: React.ReactNode
   size?: "sm" | "md" | "lg"
   rounded?: "sm" | "md" | "lg" | "full" | "normal",
-  isDisabled?: boolean
+  isDisabled?: boolean,
+  onClick?: () => void
 }
 
 
 function Button(
-  { variant = "primary", children, size = "md", rounded = "normal", isDisabled = false }: ButtonProps
+  { variant = "primary", children, size = "md", rounded = "normal", isDisabled = false, onClick }: ButtonProps
 ) {
 
   const variantStyles = {
@@ -36,7 +37,9 @@ function Button(
 
   return (
     <button className={`${variantStyles[variant]} ${sizeStyles[size]} ${roundedStyles[rounded]} ${isDisabled ? disabledStyles : enabledStyles}`}
-      disabled={isDisabled}>
+      disabled={isDisabled}
+      onClick={onClick}
+    >
       {children}
     </button>
   )
