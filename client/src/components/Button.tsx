@@ -36,7 +36,7 @@ function Button(
 
 
   return (
-    <button className={`${variantStyles[variant]} ${sizeStyles[size]} ${roundedStyles[rounded]} ${isDisabled ? disabledStyles : enabledStyles}`}
+    <button className={`${variantStyles[variant]} ${sizeStyles[size]} ${roundedStyles[rounded]} ${isDisabled ? disabledStyles : enabledStyles} h-max`}
       disabled={isDisabled}
       onClick={onClick}
     >

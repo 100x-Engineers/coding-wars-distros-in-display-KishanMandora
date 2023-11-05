@@ -6,10 +6,11 @@ type TextInputProps = {
   value: string,
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void,
   mt?: "mt-2" | "mt-4",
+  maxLength?: number
 }
 
 function TextInput(
-  { type, label, placeholder, id, onChange, value, mt, }: TextInputProps
+  { type, label, placeholder, id, onChange, value, mt, maxLength = 50 }: TextInputProps
 ) {
   return (
     <div className={`flex flex-col gap-1 ${mt ? mt : ""}`}>
@@ -19,6 +20,7 @@ function TextInput(
         id={id}
         onChange={onChange}
         value={value}
+        maxLength={maxLength}
       />
     </div>
   )

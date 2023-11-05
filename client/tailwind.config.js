@@ -10,6 +10,7 @@ export default {
     colors: {
       black: "#000000",
       white: "#ffffff",
+      links: "#3b82f6",
       pink: {
         50: "#ffe5ec",
         100: "#ffb3c6",
@@ -24,6 +25,11 @@ export default {
         50: "#ebebeb",
       },
     },
-    extend: {},
+    extend: {
+      spacing: {
+        "1/10": "10%",
+        "9/10": "90%",
+      },
+    },
   },
 };
