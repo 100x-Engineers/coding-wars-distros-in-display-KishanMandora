@@ -7,7 +7,9 @@ import SignIn from "./pages/Signin";
 import Links from "./pages/Links";
 import Summary from "./pages/Summary";
 import Templates from "./pages/Templates";
-import { HOME, SIGN_IN, LINKS, SUMMARY, TEMPLATES } from "./utils/routeConsts";
+import Pdf from "./pages/GeneratePDF";
+import { HOME, SIGN_IN, LINKS, SUMMARY, TEMPLATES, GENERATE_PDF } from "./utils/routeConsts";
+
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: SUMMARY,
     element: <Summary />,
+  },
+  {
+    path: GENERATE_PDF,
+    element: <Pdf />,
   }
 ]);
 

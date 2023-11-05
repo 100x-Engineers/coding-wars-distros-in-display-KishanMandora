@@ -9,6 +9,7 @@ type FormState = {
   linkedInLink: string;
   twitterLink: string;
   template: string;
+  summary: string;
 }
 
 type FormAction =
@@ -19,6 +20,7 @@ type FormAction =
   | { type: 'SET_LINKEDIN_LINK'; payload: string }
   | { type: 'SET_TWITTER_LINK'; payload: string }
   | { type: 'SET_TEMPLATE'; payload: string }
+  | { type: 'SET_SUMMARY'; payload: string }
 
 type FormContextProps = {
   state: FormState;
@@ -36,7 +38,8 @@ const initialState: FormState = {
   githubLink: '',
   linkedInLink: '',
   twitterLink: '',
-  template: ''
+  template: '',
+  summary: '',
 };
 
 const formReducer = (state: FormState, action: FormAction): FormState => {
@@ -55,6 +58,8 @@ const formReducer = (state: FormState, action: FormAction): FormState => {
       return { ...state, twitterLink: action.payload };
     case 'SET_TEMPLATE':
       return { ...state, template: action.payload };
+    case 'SET_SUMMARY':
+      return { ...state, summary: action.payload };
     default:
       return state;
   }
