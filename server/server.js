@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
 const dataRouter = require('./routes/dataRouter');
 
 app.use(express.json());
