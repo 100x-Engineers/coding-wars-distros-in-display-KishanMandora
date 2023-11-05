@@ -4,7 +4,8 @@ import {
 } from "react-router-dom";
 import Home from "./pages/Home"
 import SignIn from "./pages/Signin";
-import { HOME, SIGN_IN } from "./utils/routeConsts";
+import Links from "./pages/Links";
+import { HOME, SIGN_IN, LINKS } from "./utils/routeConsts";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: SIGN_IN,
     element: <SignIn />,
+  },
+  {
+    path: LINKS,
+    element: <Links />,
   }
 ]);
 
